@@ -72,9 +72,12 @@ class Calibration(QDialog, Ui_Dialog):
         for img in images:
             cv_img = cv2.imread(img)
             gray = cv2.cvtColor(cv_img, cv2.COLOR_BGR2GRAY)
-
+            # find inner corners of the chessboard
             ret, corners = cv2.findChessboardCorners(gray, (chessboard_params[0], chessboard_params[1]), None)
             if ret:
+                # get a more precise corner
+                corners = cv2.cornerSubPix(gray, corners, (5, 5), (-1, -1),
+                                           (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.01))
                 img_points.append(corners)
                 obj_points.append(obj_point)
                 cv2.drawChessboardCorners(cv_img, (chessboard_params[0], chessboard_params[1]), corners, ret)
