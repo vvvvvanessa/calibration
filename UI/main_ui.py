@@ -33,28 +33,13 @@ class Ui_Dialog(object):
 
         self.horizontalLayout_4.addWidget(self.label_4)
 
-        self.cube_wid = QSpinBox(Dialog)
-        self.cube_wid.setObjectName(u"cube_wid")
+        self.cube_size = QSpinBox(Dialog)
+        self.cube_size.setObjectName(u"cube_size")
 
-        self.horizontalLayout_4.addWidget(self.cube_wid)
+        self.horizontalLayout_4.addWidget(self.cube_size)
 
 
         self.verticalLayout.addLayout(self.horizontalLayout_4)
-
-        self.horizontalLayout_3 = QHBoxLayout()
-        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.label_3 = QLabel(Dialog)
-        self.label_3.setObjectName(u"label_3")
-
-        self.horizontalLayout_3.addWidget(self.label_3)
-
-        self.cube_hei = QSpinBox(Dialog)
-        self.cube_hei.setObjectName(u"cube_hei")
-
-        self.horizontalLayout_3.addWidget(self.cube_hei)
-
-
-        self.verticalLayout.addLayout(self.horizontalLayout_3)
 
         self.horizontalLayout_7 = QHBoxLayout()
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
@@ -133,8 +118,7 @@ class Ui_Dialog(object):
 
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Form", None))
-        self.label_4.setText(QCoreApplication.translate("Dialog", u"Cube Width(mm)", None))
-        self.label_3.setText(QCoreApplication.translate("Dialog", u"Cube Height(mm)", None))
+        self.label_4.setText(QCoreApplication.translate("Dialog", u"Cube Size(mm)", None))
         self.label_2.setText(QCoreApplication.translate("Dialog", u"Vertical Corner", None))
         self.label.setText(QCoreApplication.translate("Dialog", u"Horizental Corner", None))
         self.open_file_in.setText(QCoreApplication.translate("Dialog", u"Intrinsic Image", None))

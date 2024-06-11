@@ -19,26 +19,12 @@
      <item>
       <widget class="QLabel" name="label_4">
        <property name="text">
-        <string>Cube Width(mm)</string>
+        <string>Cube Size(mm)</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QSpinBox" name="cube_wid"/>
-     </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
-     <item>
-      <widget class="QLabel" name="label_3">
-       <property name="text">
-        <string>Cube Height(mm)</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QSpinBox" name="cube_hei"/>
+      <widget class="QSpinBox" name="cube_size"/>
      </item>
     </layout>
    </item>
@@ -66,7 +52,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QSpinBox" name="horiz_corner"/>
+      <widget class="QSpinBox" name="horiz_corner">
+       <property name="readOnly">
+        <bool>false</bool>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
